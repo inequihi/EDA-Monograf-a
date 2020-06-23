@@ -11,13 +11,23 @@ int main()
     char txt[] = "ABAAABCD";
     char pat[] = "ABC";
 
+    /*******************
+    START TIMER
+    *******************/
     auto start = high_resolution_clock::now();
+
+    /*******************
+         ALGORITMO
+    *******************/
     search(txt, pat);
 
+    /*******************
+        END TIMER
+    *******************/
     auto stop = high_resolution_clock::now();
     auto duration = duration_cast<microseconds>(stop - start);
 
-   cout << endl << "COUNT = " << duration.count() << endl;
+   cout << endl << "\nCOUNT = " << duration.count() << endl;
 
     return 0;
 }
