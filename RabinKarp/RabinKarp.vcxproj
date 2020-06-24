@@ -145,6 +145,9 @@
     <ClCompile Include="RabinKarp.cpp" />
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="SARS_Covid2.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

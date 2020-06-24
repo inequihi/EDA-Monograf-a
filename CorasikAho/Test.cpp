@@ -1,6 +1,10 @@
 #include "AhoCorasik.h"
 #include <chrono> 
 #include <iostream> 
+#include <fstream>
+#include <string>
+#include <algorithm>
+#include <iterator>
 
 using namespace std;
 using namespace std::chrono;
@@ -82,13 +86,20 @@ int findNextState(int currentState, char nextInput, char lowestChar = 'a')
 
 int main()
 {
+    /*******************
+      GUARDAMOS GENOMA
+    *******************/
+    string text;
+   stringstream buffer;
+    buffer << ifstream("SARS_Covid.txt").rdbuf();
+    text = buffer.str();
 
+  cout << text << endl; 
+  
     vector<string> keywords;
-    keywords.push_back("he");
-    keywords.push_back("she");
-    keywords.push_back("hers");
-    keywords.push_back("his");
-    string text = "ahishers";
+    keywords.push_back("tgt");
+    keywords.push_back("tat");
+    keywords.push_back("tgg");
     buildMatchingMachine(keywords, 'a', 'z');
     int currentState = 0;
 

@@ -1,7 +1,10 @@
 
 #include "RabinKarp.h"
 #include <chrono> 
+#include <iostream>
+#include <fstream>
 #include <iostream> 
+#define ARRAYSIZE 10000
 
 using namespace std;
 using namespace std::chrono;
@@ -9,8 +12,27 @@ using namespace std::chrono;
 int main()
 {
 
-    char txt[] = "ABAAABCD";
-    char pat[] = "ABC";
+    char txt[ARRAYSIZE];
+    char current_char;
+    int num_characters = 0;
+    int i = 0;
+
+    ifstream genomeSequence("SARS_Covid.txt");
+
+    if (genomeSequence.is_open())
+    {
+        while (!genomeSequence.eof())
+        {
+            if ((genomeSequence.get() != ' ') && (genomeSequence.get() != '\n'))
+            {
+                genomeSequence >> txt[i];
+                i++;
+                num_characters++;
+            }
+        }
+    }
+
+    char pat[] = "tgg";
     int q = 101;
 
     /*******************

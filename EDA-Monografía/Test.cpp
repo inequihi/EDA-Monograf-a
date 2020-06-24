@@ -1,15 +1,38 @@
 #include "BoyerMoore.h"
 #include <chrono> 
-#include <iostream> 
+#include <iostream>
+#include <fstream>
+#define ARRAYSIZE 10000
 
+#include <stdlib.h>
+#include <stdio.h>
 using namespace std;
 using namespace std::chrono;
 
 int main()
 {
+    char txt[ARRAYSIZE];
+    char current_char;
+    int num_characters = 0;
+    int i = 0;
 
-    char txt[] = "ABAAABCD";
-    char pat[] = "ABC";
+    ifstream genomeSequence("SARS_Covid.txt");
+
+    if (genomeSequence.is_open())
+    {
+        while (!genomeSequence.eof())
+        {
+            if ((genomeSequence.get() != ' ') && (genomeSequence.get() != '\n'))
+            {
+                genomeSequence >> txt[i];
+                i++;
+                num_characters++;
+            }
+        }
+    }
+
+
+    char pat[] = "tga";
 
     /*******************
     START TIMER
