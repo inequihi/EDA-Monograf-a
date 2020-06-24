@@ -147,6 +147,7 @@
     <ClInclude Include="BoyerMoore.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="SARS_Covid.txt" />
     <Text Include="SARS_Covid2.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

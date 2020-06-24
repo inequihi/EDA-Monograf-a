@@ -28,5 +28,8 @@
     <Text Include="SARS_Covid2.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="SARS_Covid.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

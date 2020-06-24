@@ -6,6 +6,7 @@
 
 void search(char* pat, char* txt, int q)
 {
+    int TOTALCOUNT = 0;
     int M = strlen(pat);
     int N = strlen(txt);
     int i, j;

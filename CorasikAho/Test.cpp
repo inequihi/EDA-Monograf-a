@@ -5,7 +5,7 @@
 #include <string>
 #include <algorithm>
 #include <iterator>
-
+#define TEST1
 using namespace std;
 using namespace std::chrono;
 
@@ -94,12 +94,13 @@ int main()
     buffer << ifstream("SARS_Covid.txt").rdbuf();
     text = buffer.str();
 
-  cout << text << endl; 
-  
+    unsigned int Ocurrencias = 0;
+
     vector<string> keywords;
-    keywords.push_back("tgt");
-    keywords.push_back("tat");
-    keywords.push_back("tgg");
+
+    keywords.push_back("gggg");
+
+
     buildMatchingMachine(keywords, 'a', 'z');
     int currentState = 0;
 
@@ -122,6 +123,8 @@ int main()
             { // Matched keywords[j]
                 cout << "Keyword " << keywords[j] << " appears from " << i
                     - keywords[j].size() + 1 << " to " << i << endl;
+
+                Ocurrencias += 1;
             }
         }
     }
@@ -132,7 +135,7 @@ int main()
     auto stop = high_resolution_clock::now();
     auto duration = duration_cast<microseconds>(stop - start);
 
-    cout << endl << "COUNT = " << duration.count() << endl;
+    cout << endl << "COUNT = " << duration.count() << endl << "OCURRENCIAS =" << Ocurrencias ;
 
     return 0;
 }
