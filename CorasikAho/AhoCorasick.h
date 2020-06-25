@@ -1,5 +1,5 @@
-#ifndef AHOCORASIK
-#define AHOCORASIK
+#ifndef AHOCORASICK
+#define AHOCORASICK
 
 using namespace std;
 #include <algorithm>
@@ -37,4 +37,4 @@ int f[MAXS]; // Failure function
 int g[MAXS][MAXC]; // Goto function, or -1 if fail.
 
 
-#endif //AHOCORASIK_H
+#endif //AHOCORASICK_H

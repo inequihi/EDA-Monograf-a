@@ -32,7 +32,7 @@ int main()
         }
     }
 
-    char pat[] = "agtgt";
+    char pat[] = "aaaa";
     int q = 101;
 
     /*******************

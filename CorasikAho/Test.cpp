@@ -1,4 +1,4 @@
-#include "AhoCorasik.h"
+#include "AhoCorasick.h"
 #include <chrono> 
 #include <iostream> 
 #include <fstream>
@@ -98,7 +98,7 @@ int main()
 
     vector<string> keywords;
 
-    keywords.push_back("gggg");
+    keywords.push_back("tttt");
 
 
     buildMatchingMachine(keywords, 'a', 'z');
